@@ -64,11 +64,10 @@ a:hover{
 
 .navbar .hamburger-lines{
     display: block;
-    height: calc(16px + 1vw);
+    height: calc(16px + 1vh);
     width: calc(26px + 1vw);
     position: absolute;
     left: 20px;
-    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -166,22 +165,21 @@ a:hover{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    cursor: not-allowed;
     pointer-events: none;
 
-    top: 90px;
+    top: 0;
     left: 0px;
     z-index: 100;
     width: 100%;
-    height: calc(100vh - 90px);
+    height: 100vh;
     background-color: #000;
     opacity: 0;
+    z-index: -1;
     transition: opacity 0.3s ease-in-out;
 }
 
 .navbar input[type="checkbox"]:checked ~ .menu-items{
     opacity: 1;
-    cursor: pointer;
     pointer-events: all;
 }
 
@@ -264,15 +262,15 @@ a:hover{
     border-radius: 5px;
     background-color: transparent;
     color: #fff;
-    transition: background-color .2s 0s ease-in-out;
+    transition: border-color .2s 0s ease-in-out;
     transition: color .1 0s ease-in-out;
     transition: transform .2s 0s ease-in-out;
 }
 
 .content .headline a button:hover {
     transform: translateY(-5px);
-    background-color: white;
-    color: #000;
+    border-color: #ff0033;
+    color: #ff0033;
 }
 
 #changing-headline {
@@ -281,7 +279,7 @@ a:hover{
 }
 
 .about-wrapper {
-    margin-top: calc(300px + 20vw);
+    padding-top: 100px;
     width: 100%;
     height: 100%;
     background-color: #0f0f0f;
@@ -304,35 +302,49 @@ a:hover{
     overflow-wrap: break-word;
 }
 
-.about-section .about-wrapper-expertise-title {
-    margin-top: 50px;
+.expertise-wrapper {
+    width: 100%;
+    padding: calc(0px + 1vw) 0px;
+    background-color: #0f0f0f;
 }
 
-.about-section .skill-bubble {
+.expertise-wrapper .skill-bubble {
     font-family: "Poppins", sans-serif;
     margin: 5px;
     width: calc(150px + 2vw);
-    height: 40px;
-    border: none;
-    border-radius: 30px;
+    height: 60px;
+    font-size: calc(12px + .33vw);
+    background-color: transparent;
     color: #fff;
-    background-image: linear-gradient(to right, #353a3f, #23272a);
+    border-radius: 30px;
+    border: #ff0033 5px solid;
     transition: transform 0.2s ease-in-out;
 }
 
-.about-section .skill-bubble:hover {
+.expertise-wrapper .skill-bubble:hover {
     transform: scale(1.1);
 }
 
 .project-wrapper {
-    margin-top: calc(150px + 5vw);
+    margin-top: calc(300px + 20vw);
+    padding-bottom: 20px;
     width: 100%;
     height: 100%;
     background-color: #0f0f0f;
 }
 
 .project-wrapper-title {
-    font-size: calc(20px + 2vw)
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: calc(20px + 2vw);
+    color: #ff0033;
+}
+
+.project-wrapper-sub-title {
+    margin-top: 0;
+    padding-top: 0;
+    margin-bottom: calc(0px + 2vw);
+    font-size: calc(9px + .8vw);
 }
 
 .projects-section {
@@ -373,6 +385,7 @@ a:hover{
     margin: 0;
     margin-top: 10px;
     padding: 0;
+    color: #ff0033;
 }
 
 .project .project-sub-title {
@@ -393,12 +406,37 @@ a:hover{
     background-color: transparent;
     border: #fff solid;
     box-shadow: 4px 4px 15px -5px #000;
-    transition: background-color .4s ease-in-out, color .4s ease-in-out;
+    transition: border-color .4s ease-in-out, color .4s ease-in-out;
 }
 
 .project button:hover {
-    background-color: #fff;
-    color: #0f0f0f;
+    border-color: #ff0033;
+    color: #ff0033;
+}
+
+.footer-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 0 5%;
+    width: 90%;
+    height: 100px;
+    background-color: #000;
+}
+
+.footer-wrapper .left-side-footer {
+    margin-left: 10vw;
+    margin-top: 30px;
+    text-align: left;
+}
+
+.footer-wrapper .left-side-footer h1 {
+    font-family: 'Pacifico', cursive;
+}
+
+.footer-wrapper .right-side-footer {
+    margin-left: 30vw;
+    margin-top: 80px;
+    text-align: right;
 }
 
 @media (max-width: 768px) {
@@ -417,6 +455,19 @@ a:hover{
 
     .project .project-sub-title {
         margin-bottom: 20px;
+    }
+
+    .footer-wrapper .left-side-footer {
+        margin-left: 0px;
+        font-size: 10px;
+        width: 150px;
+    }
+
+    .footer-wrapper .right-side-footer {
+        margin-top: 60px;
+        margin-left: 50px;
+        font-size: 10px;
+        width: 200px;
     }
     
 }
