@@ -64,7 +64,7 @@ a:hover{
 
 .navbar .hamburger-lines{
     display: block;
-    height: calc(16px + 1vh);
+    height: calc(16px + 1vw);
     width: calc(26px + 1vw);
     position: absolute;
     left: 20px;
@@ -160,7 +160,7 @@ a:hover{
 }
 
 .menu-items{
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -168,11 +168,12 @@ a:hover{
     pointer-events: none;
 
     top: 0;
-    left: 0px;
+    left: 0;
+    padding-top: 25vh;
     z-index: 100;
     width: 100%;
     height: 100vh;
-    background-color: #000;
+    background-color: #0f0f0f;
     opacity: 0;
     z-index: -1;
     transition: opacity 0.3s ease-in-out;
@@ -184,16 +185,21 @@ a:hover{
 }
 
 .menu-items li{
-    transform: translateY(150px);
     padding: 0;
     margin: 0;
-    list-style: none;   
-    font-size: 300%;
-    margin: 20px;
+    list-style: none; 
+    font-size: calc(30px + 1vw);
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .menu-items li:hover{
-    font-weight: bold;
+    transform: translateY(-5px);
+}
+
+.menu-items .menu-sub-title{
+    position: absolute;
+    bottom: 25vh;
+    font-size: 15px;
 }
 
 .parallax-image {
@@ -279,19 +285,17 @@ a:hover{
 }
 
 .about-wrapper {
-    padding-top: 100px;
     width: 100%;
-    height: 100%;
     background-color: #0f0f0f;
 }
 
 .about-wrapper-title {
+    color: #ff0033;
     font-size: calc(20px + 2vw)
 }
 
 .about-section {
     justify-content: center;
-    margin-bottom: 50px;
 }
 
 .about-paragraphs {
@@ -300,6 +304,21 @@ a:hover{
     font-size: calc(15px + .3vw);
     text-align: left;
     overflow-wrap: break-word;
+}
+
+.programming-specialization-section {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.about-wrapper .programming-specialization-title{
+    font-size: calc(20px + 0.5vw);
+    color: #ff0033;
+}
+
+.programming-specialization-section img{
+    width: calc(60px + 2vw);
+    height: auto;
 }
 
 .expertise-wrapper {
@@ -311,9 +330,9 @@ a:hover{
 .expertise-wrapper .skill-bubble {
     font-family: "Poppins", sans-serif;
     margin: 5px;
-    width: calc(150px + 2vw);
-    height: 60px;
-    font-size: calc(12px + .33vw);
+    width: calc(100px + 2vw);
+    height: calc(50px + 0.5vw);
+    font-size: calc(10px + .15vw);
     background-color: transparent;
     color: #fff;
     border-radius: 30px;
@@ -439,7 +458,23 @@ a:hover{
     text-align: right;
 }
 
+.footer-wrapper .right-side-footer h4 {
+    margin: 0;
+}
+
 @media (max-width: 768px) {
+    .navbar .hamburger-lines {
+        height: calc(16px + 1vh);
+        width: calc(26px + 1vw);
+    }
+
+    .navbar .checkbox {
+        top: 20px;
+        left: 15px;
+        height: calc(16px + 1vh);
+        width: calc(26px + 1vw);
+    }
+
     .projects-section {
         flex-direction: column;
     }
@@ -453,21 +488,28 @@ a:hover{
         width: 250px;
     }
 
+    .project button {
+        margin-bottom: 10px;
+    }
+
     .project .project-sub-title {
         margin-bottom: 20px;
+    }
+
+    .footer-wrapper {
+        flex-direction: column;
     }
 
     .footer-wrapper .left-side-footer {
         margin-left: 0px;
         font-size: 10px;
-        width: 150px;
+        width: 100%;
     }
 
     .footer-wrapper .right-side-footer {
-        margin-top: 60px;
-        margin-left: 50px;
         font-size: 10px;
         width: 200px;
-    }
-    
+        text-align: left;
+        margin: 0;
+    }    
 }
