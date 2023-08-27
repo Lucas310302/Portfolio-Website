@@ -1,7 +1,7 @@
 const changingHeadline = document.getElementById("changing-headline");
 
 const contentArray = ["Web Developer", "Programmer", "UX Designer"];
-const colorArray = ["#fff", "#fff", "#fff"];
+const colorArray = ["#ff0033", "#ff0033", "#ff0033"];
 let index = 0
 
 function changeHeadline() {

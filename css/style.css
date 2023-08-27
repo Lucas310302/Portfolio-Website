@@ -264,8 +264,8 @@ a:hover{
     width: calc(80px + 4vw);
     height: calc(30px + 1vw);
     font-size: calc(10px + .3vw);
-    border: 1px solid #fff;
-    border-radius: 5px;
+    border: 2px solid #fff;
+    border-radius: 30px;
     background-color: transparent;
     color: #fff;
     transition: border-color .2s 0s ease-in-out;
@@ -286,7 +286,7 @@ a:hover{
 
 .about-wrapper {
     width: 100%;
-    background-color: #0f0f0f;
+    background-color: #030303;
 }
 
 .about-wrapper-title {
@@ -460,6 +460,40 @@ a:hover{
 
 .footer-wrapper .right-side-footer h4 {
     margin: 0;
+}
+
+.contact-me-section {
+    position: relative;
+    padding-top: 90px;
+    width: 100%;
+    height: 70vh;
+    text-align: center;
+    background-color: #030303;
+}
+
+.contact-me-section .contact-me-title {
+    font-size: calc(30px + 2vw);
+    color: #ff0033;
+    margin-bottom: 0;
+}
+
+.contact-me-section .contact-me-sub-title {
+    font-size: calc(10px + .4vw);
+    padding: 0;
+    margin: 0;
+    margin-bottom: 150px;
+}
+
+.contact-me-section .contact-me-phone-number {
+    margin: 0;
+    font-size: calc(15px + 1.5vw);
+    color: #ff0033;
+}
+
+.contact-me-section .contact-me-email {
+    margin: 0;
+    font-size: calc(15px + 1.5vw);
+    color: #ff0033;
 }
 
 @media (max-width: 768px) {
